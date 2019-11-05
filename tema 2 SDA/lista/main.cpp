@@ -135,29 +135,36 @@ void creez_lista_ordonata(nod* &prim)
     prim->next=NULL;
     cout<<"Pentru oprire cititi 10000"<<endl;
     cin>>val;
+    int max=val;
     while(val!=10000)
     {
-        if(val<prim->info) adaug_inceput(prim,val);
+        nod*p=prim;
+        if(val<=prim->info) adaug_inceput(prim,val);
+        else if (val>=max) {adaug_final(prim,val); max=val;}
         else
         {
-            nod* p=prim;
-            int i=2;
-            while(p!=NULL)
-            {
-                if(p->info>=val) break;
-                i++;
-                p=p->next;
-            }
 
-            if(p==NULL) adaug_final(prim,val);
-            else adaug_poz(prim,i,val);
+        nod*ant=prim;
+        int i=0;
+        while(p!=NULL)
+        {
+            if(p->info>val) break;
+            p=p->next;
+            i++;
 
+
+
+        }
+            adaug_poz(prim,i,val);
         }
         cout<<"Introduceti alt nr"<<endl;
         cin>>val;
+        p=prim;
     }
-
+    cout<<endl<<endl;
     afisare_lista(prim);
+
+    cout<<endl<<endl;
 }
 
 void supl3(nod* prim)
@@ -378,7 +385,7 @@ int main()
 
     //meniu();
     nod * ord=new nod;
-//    creez_lista_ordonata(ord);
+    creez_lista_ordonata(ord);
     nod* prim=new nod;
     prim->info=3;
     prim->next=NULL;
@@ -392,6 +399,9 @@ int main()
     supl3(prim);
     cout<<endl;
     supl4(prim);
+    cout<<endl;
+    supl5();   //numerele trebuie citite incepand cu unitatile, cifra cu cifra,
+               //suma este tot in ordine inversa
 
 
 

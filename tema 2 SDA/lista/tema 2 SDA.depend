@@ -2,6 +2,7 @@
 1572815064 source:c:\users\dragos\desktop\tema 2 sda\main.cpp
 	<iostream>
 
-1572893530 source:c:\users\dragos\desktop\tema 2 sda\lista\main.cpp
+1572978227 source:c:\users\dragos\desktop\tema 2 sda\lista\main.cpp
 	<iostream>
+	<string.h>
 

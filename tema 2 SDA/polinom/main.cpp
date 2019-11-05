@@ -27,7 +27,7 @@ void citesc_polinom(polinom* &p)
     }
 }
 
-void inmultesc_scalar(polinom * &p, int a)
+void inmultesc_scalar(polinom * &p, int a)          //ex 6
 {
     polinom* temp=p;
     while(temp!=NULL)
@@ -37,7 +37,7 @@ void inmultesc_scalar(polinom * &p, int a)
     }
 }
 
-int P(polinom *p, int x)
+int P(polinom *p, int x)            //ex 7
 {
     int evaluare=0;
     polinom* temp=p;
@@ -64,7 +64,7 @@ void afisez_polinom(polinom *p)
     else cout<<temp->coef;
 }
 
-polinom suma_polinoame(polinom *p1, polinom *p2)
+polinom suma_polinoame(polinom *p1, polinom *p2)            //ex 8
 {
     polinom *temp1=p1;
     polinom *temp2=p2;
@@ -116,7 +116,7 @@ polinom suma_polinoame(polinom *p1, polinom *p2)
         temp2=temp2->next;
     }
 
-    cout<<"semn 3"<<endl;
+
 
     while(temp1!=NULL)
     {
@@ -129,7 +129,7 @@ polinom suma_polinoame(polinom *p1, polinom *p2)
         temp1=temp1->next;
         temp2=temp2->next;
     }
-    cout<<"semn 4"<<endl;
+
     INCEPUT=INCEPUT->next;
     afisez_polinom(INCEPUT);
 
